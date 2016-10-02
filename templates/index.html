@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+<div class="container">
+    {% csrf_token %}
+    <div style="text-align:center;">
+      <div class="title">
+        <h3>{% trans 'The Ultimate Foursquare Client' %}</h3>
+      </div>
+    </div>
+
+
+
+    <div style="text-align:center">
+
+        {% if form %}
+            <form id='form' action="{{ form_action }}" method="post">
+             {% csrf_token %}
+            <div class="col-md-12">
+             {% for field in form.visible_fields %}
+                <div class="col-md-4">
+                      <span class="input-group-addon">
+
+                        {% if field.name in form.spawns_classes %}
+                        {% for key, value  in form.spawns_classes.items %}
+                        {% if key == field.name  %}
+                           <span class="{{ value }}"></span>
+                        {% endif %}
+                        {% endfor %}
+
+                        {% else %}
+                        <span class="glyphicon glyphicon-info-sign"></span>
+                        {% endif %}
+
+                      </span>
+                      {{ field }}
+                </div>
+             {% endfor %}
+
+              <div class="col-md-4" style="margin-top: 20px;">
+
+                {% if form.buttons %}
+                {% for data in form.buttons %}
+                <input
+                  {% for key, value in data.items %}
+                  {{ key }}="{{ value }}"
+                  {% endfor %}
+                >
+                {% endfor %}
+                {% endif %}
+              </div>
+
+             </div>
+            </form>
+        {% endif %}
+
+        {% if error_message %}
+            <p style="color: red">{{ error_message }} </p>
+        {% endif %}
+
+    </div>
+</div> <!-- /container -->
+{% endblock %}

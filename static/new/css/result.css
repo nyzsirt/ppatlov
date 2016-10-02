@@ -1,0 +1,25 @@
+body {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.container {
+  max-width: 370px;
+  padding: 15px;
+  margin: 0 auto;
+  border: 1px solid silver;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  background-color: #eee;
+
+}
+
+.container .form-control {
+  position: relative;
+  height: auto;
+  -webkit-boxr-sizing: border-box;
+      -moz-box-sizing: border-box;
+           box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
