@@ -1,0 +1,39 @@
+#content-main h2
+{
+	font-family:"Arial",Verdana,sans-serif;
+        color:blue;
+}
+
+#content-main form p label
+{	
+	width: 8em;
+	font-size: 0.9em;
+	font-family:"Arial",Verdana,sans-serif;
+	float: left;
+	padding:0;
+	margin:0;
+	text-align: left;
+	display: block
+}
+
+#content-main form p input
+{
+	color: #781351;
+	background: #fee3ad;
+	border: 1px solid #781351;
+	width:14em;
+}
+	
+
+
+#create-button
+{	
+	float:left;
+	position:relative;
+	margin-left: 12em;
+	font-size: 0.9em;
+	padding-left:0;
+	border: 2px outset #d7b9c9;
+}
+
+

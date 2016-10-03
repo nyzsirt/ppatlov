@@ -1,0 +1,450 @@
+#header
+{
+	float:left;
+	font-family:"Arial",Verdana,sans-serif;
+	color:blue;
+	margin-top:2em;
+}
+
+#header1
+{
+	margin:0;
+}
+
+
+#logo
+{
+	float:left;
+	width:250px;
+	text-align:center;
+}
+
+#content-header
+{
+	position: relative;
+}
+
+#sidebar
+{
+	float:left;
+}
+
+#sidebar ul
+{
+	list-style-type:none;
+	padding:0px;
+      	margin-top:2em;	
+      	margin-bottom:0px;	
+        line-height:1em;
+	margin-left:30px;
+
+}
+
+#sidebar li a
+{
+	display:block;
+	padding:5px;
+	border-left:7px solid #88a;
+	text-decoration:none;
+	color:blue;
+	margin:0px;
+        line-height:1.5em;
+        font-family:"Arial",Verdana,sans-serif;
+	font-size:1.2em;
+
+
+}
+
+#sidebar li a:hover
+{
+	border-color:#0491a2;
+	background:#0491a2;
+	color:white;
+}
+
+
+#sidebar li
+{ 
+	margin:0px;
+	padding:0px;
+	line-height:1em;
+	_margin-bottom:-1.25em;
+	_margin-bottom:-1.25em; 
+} 
+
+#content-main
+{
+        position: relative;
+        _margin-top:2em;
+        margin-top:2em;
+        margin-left:250px;
+        font-family:"Arial",Verdana,sans-serif;
+}
+
+#hor-minimalist-a
+
+{
+
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+
+	font-size: 0.9em;
+
+	background: #fff;
+
+
+	border-collapse: collapse;
+	border-style:solid;
+	border-width:2px;
+	border-color:#67F;
+	margin:0;
+	padding:0;
+
+	text-align: left;
+
+}
+
+#hor-minimalist-a th
+
+{
+
+	font-size: 14px;
+
+	font-weight: normal;
+
+	color: #229;
+
+	padding: 10px 8px;
+
+	border-bottom: 2px;
+	background-color: #AAD;
+	border-color:#67F;
+
+}
+
+#hor-minimalist-a td
+
+{
+
+	color: #229;
+
+	padding: 9px 8px 0px 8px;
+	border-color:#67F;
+
+}
+
+#hor-minimalist-a tbody tr:hover td
+
+{
+
+	color: #FFF;
+	background-color:#229;
+	
+
+}
+
+.submit input
+{
+color: white;
+background: #6677FF;
+border: 2px outset #d7b9c9;
+_margin-left:7.55em;
+margin-left: 15em;
+_margin-bottom: 1em;
+
+}
+
+
+#settings-fieldset
+{
+border: 2px solid #6677FF;
+width: 32em;
+}
+
+#create-fieldset
+{
+border: 2px solid #6677FF;
+width: 32em;
+}
+
+legend
+{
+color: white;
+background: #6677FF;
+font-size:1.2em;
+border: 2px solid #6677FF;
+padding: 2px 6px 2px 6px;
+}
+
+label 
+{
+width: 12em;
+float: left;
+text-align: right;
+margin-right: 0.5em;
+display: block;
+}
+
+textarea
+{
+
+width: 15em;
+height: 8em;
+border-color: #6677FF;
+}
+
+
+input
+{
+color: #000;
+background: #FFF;
+border: 1px solid  #6677FF;
+}
+
+h3
+{
+color:blue;
+}
+
+#user-info-table
+{
+
+margin-top: 1.5em;
+font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+font-size:0.8em;
+color:black;
+}
+
+/* CALENDARS & CLOCKS */
+
+.calendarbox, .clockbox {
+    margin: 5px auto;
+    font-size: 11px;
+    width: 16em;
+    text-align: center;
+    background: white;
+    position: relative;
+}
+
+.clockbox h2 {
+    margin: 0;
+    font-size: 11px;
+    text-align: center;
+    border-top: none;
+}
+
+.clockbox {
+    width: auto;
+}
+
+.calendar {
+    margin: 0;
+    padding: 0;
+}
+
+.calendar table {
+    margin: 0;
+    padding: 0;
+    border-collapse: collapse;
+    background: white;
+    width: 99%;
+}
+
+.calendar caption, .calendarbox h2 {
+    margin: 0;
+    font-size: 11px;
+    text-align: center;
+    border-top: none;
+}
+
+.calendar th {
+    font-size: 10px;
+    color: #666;
+    padding: 2px 3px;
+    text-align: center;
+    background: #e1e1e1 url(/wauth/site_media_admin/admin_media/img/admin/nav-bg.gif) 0 50% repeat-x;
+    border-bottom: 1px solid #ddd;
+}
+
+.calendar td {
+    font-size: 11px;
+    text-align: center;
+    padding: 0;
+    border-top: 1px solid #eee;
+    border-bottom: none;
+}
+
+.calendar td.selected a {
+    background: #C9DBED;
+}
+
+.calendar td.nonday {
+    background: #efefef;
+}
+
+.calendar td.today a {
+    background: #ffc;
+}
+
+.calendar td a, .timelist a {
+    display: block;
+    font-weight: bold;
+    padding: 4px;
+    text-decoration: none;
+    color: #444;
+}
+
+.calendar td a:hover, .timelist a:hover {
+    background: #5b80b2;
+    color: white;
+}
+
+.calendar td a:active, .timelist a:active {
+    background: #036;
+    color: white;
+}
+
+.calendarnav {
+    font-size: 10px;
+    text-align: center;
+    color: #ccc;
+    margin: 0;
+    padding: 1px 3px;
+}
+
+.calendarnav a:link, #calendarnav a:visited, #calendarnav a:hover {
+    color: #999;
+}
+
+.calendar-shortcuts {
+    background: white;
+    font-size: 10px;
+    line-height: 11px;
+    border-top: 1px solid #eee;
+    padding: 3px 0 4px;
+    color: #ccc;
+}
+
+.calendarbox .calendarnav-previous, .calendarbox .calendarnav-next {
+    display: block;
+    position: absolute;
+    font-weight: bold;
+    font-size: 12px;
+    background: #C9DBED url(/wauth/site_media_admin/admin_media/img/admin/default-bg.gif) bottom left repeat-x;
+    padding: 1px 4px 2px 4px;
+    color: white;
+}
+
+.calendarnav-previous:hover, .calendarnav-next:hover {
+    background: #036;
+}
+
+.calendarnav-previous {
+    top: 0;
+    left: 0;
+}
+
+.calendarnav-next {
+    top: 0;
+    right: 0;
+}
+
+.calendar-cancel {
+    margin: 0 !important;
+    padding: 0;
+    font-size: 10px;
+    background: #e1e1e1 url(/wauth/site_media_admin/admin_media/img/admin/nav-bg.gif) 0 50% repeat-x;
+    border-top: 1px solid #ddd;
+}
+
+.calendar-cancel a {
+    padding: 2px;
+    color: #999;
+}
+
+ul.timelist, .timelist li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.timelist a {
+    padding: 2px;
+}
+
+/* MESSAGES & ERRORS */
+
+ul.messagelist {
+    padding: 0 0 5px 0;
+    margin: 0;
+}
+
+ul.messagelist li {
+    font-size: 12px;
+    display: block;
+    padding: 4px 5px 4px 25px;
+    margin: 0 0 3px 0;
+    border-bottom: 1px solid #ddd;
+    color: #666;
+    background: #ffc url(/site_media_admin/admin_media/img/admin/icon_success.gif) 5px .3em no-repeat;
+}
+
+.errornote {
+    font-size: 12px !important;
+    display: block;
+    padding: 4px 5px 4px 25px;
+    margin: 0 0 3px 0;
+    border: 1px solid red;
+    color: red;
+    background: #ffc url(/site_media_admin/admin_media/img/admin/icon_error.gif) 5px .3em no-repeat;
+}
+
+ul.errorlist {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.errorlist li {
+    font-size: 12px !important;
+    display: block;
+    padding: 4px 5px 4px 25px;
+    margin: 0 0 3px 0;
+    border: 1px solid red;
+    color: white;
+    background: red url(/site_media_admin/admin_media/img/admin/icon_alert.gif) 5px .3em no-repeat;
+}
+
+td ul.errorlist {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+td ul.errorlist li {
+    margin: 0 !important;
+}
+
+.errors {
+    background: #ffc;
+}
+
+.errors input, .errors select {
+    border: 1px solid red;
+}
+
+div.system-message {
+    background: #ffc;
+    margin: 10px;
+    padding: 6px 8px;
+    font-size: .8em;
+}
+
+div.system-message p.system-message-title {
+    padding: 4px 5px 4px 25px;
+    margin: 0;
+    color: red;
+    background: #ffc url(/site_media_admin/admin_media/img/admin/icon_error.gif) 5px .3em no-repeat;
+}
+
+.description {
+    font-size: 12px;
+    padding: 5px 0 0 12px;
+}

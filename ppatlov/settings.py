@@ -14,7 +14,8 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
+# BASE_DIR = os.path.abspath(os.path.dirname(__file__))
+PPATLOV_REVISION_NUMBER = 1.devel
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
@@ -37,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'table',
 ]
 
 MIDDLEWARE = [
@@ -54,7 +56,8 @@ ROOT_URLCONF = 'ppatlov.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')]
+        # 'DIRS': [os.path.join(BASE_DIR, 'templates')]
+        'DIRS': ["/root/ppatlov/templates",]
         ,
         'APP_DIRS': True,
         'OPTIONS': {
@@ -67,6 +70,19 @@ TEMPLATES = [
         },
     },
 ]
+
+# TEMPLATE_LOADERS = (
+#     'django.template.loaders.filesystem.Loader',
+#     'django.template.loaders.app_directories.load_template_source',
+# )
+#
+# TEMPLATE_DIRS = (
+#     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
+#     # Always use forward slashes, even on Windows.
+#     # Don't forget to use absolute paths, not relative paths.
+#     "/root/ppatlov/templates",
+# )
+
 
 WSGI_APPLICATION = 'ppatlov.wsgi.application'
 
@@ -117,5 +133,13 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
+
+STATICFILES_DIRS = (
+
+    # Put strings here, like "/home/html/static" or "C:/www/django/static".
+    # Always use forward slashes, even on Windows.
+    # Don't forget to use absolute paths, not relative paths.
+    '/root/ppatlov/static/',
+)
 
 STATIC_URL = '/static/'

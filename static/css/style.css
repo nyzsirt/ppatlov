@@ -1,0 +1,211 @@
+@charset "utf-8";
+/* CSS Document */
+
+body,html
+{
+	text-align:center;
+	font-size:10px;
+	margin:0;
+	padding:0;
+}
+.titles
+{
+font-family: 'Trebuchet MS', Helvetica, sans-serif;
+	font-weight:bold;
+	font-size:14px;	
+	color:#333333;
+}
+
+.greeen { font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:20px; font-weight:bold; color:#060;}
+.red { font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:20px; font-weight:bold; color:#900;}
+.paynotificatin {font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:14px; font-weight:bold; color:#333;}
+.paynotificatindescription {font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:14px; color:#333;}
+
+.content
+{
+font-family: 'Trebuchet MS', Helvetica, sans-serif;
+	font-size:12px;	
+	color:#666666;
+}
+.tutar_baslik
+{
+font-family: 'Trebuchet MS', Helvetica, sans-serif;
+	font-size:17px;	
+	color:#000;	
+}
+.tutar
+{
+font-family: 'Trebuchet MS', Helvetica, sans-serif;
+	font-size:10px;	
+	color:#000;
+	font-weight:bold;	
+}
+.input_tel
+{
+	background-image:url(/site_media_portal/images/input_bg.png);
+	background-repeat:no-repeat;
+font-family: 'Trebuchet MS', Helvetica, sans-serif;
+	font-size:21px;	
+	line-height:42px;
+	color:#666666;
+	height:41px;
+	width:291px;
+	border:none;
+	text-align:center;
+}
+.input_agre
+{
+    font-family: 'Trebuchet MS', Helvetica, sans-serif;
+	font-size:21px;	
+	line-height:42px;
+	color:#666666;
+	border:none;
+	text-align:center;
+}
+.footer
+{
+font-family: 'Trebuchet MS', Helvetica, sans-serif;
+	font-size:10px;	
+	color:#666666;
+	line-height:13px;
+}
+.table_style
+{
+	max-width:800px;	
+}
+.lbl_name
+{
+	color:#8C8C8C;
+font-family: 'Trebuchet MS', Helvetica, sans-serif;
+	font-size:14px;
+}
+.titles_1
+{
+font-family: 'Trebuchet MS', Helvetica, sans-serif;
+	font-weight:bold;
+	font-size:16px;	
+	color:#333333;
+}
+.content_1
+{
+font-family: 'Trebuchet MS', Helvetica, sans-serif;
+	font-size:15px;	
+	color:#666666;
+}
+.tutar_1
+{
+font-family: 'Trebuchet MS', Helvetica, sans-serif;
+	font-size:16px;	
+	color:#FFF;
+	font-weight:bold;	
+}
+.list
+{
+	background-image:url(/site_media_portal/images/bg_list.png);
+	background-repeat:repeat-x;
+	height:38px;
+}
+.kart_no
+{
+font-family: 'Trebuchet MS', Helvetica, sans-serif;
+	font-size:15px;	
+	color:#666666;
+}
+.input_isim
+{
+	background-image:url(/site_media_portal/images/bg_kart_isim.png);
+	background-repeat:no-repeat;
+font-family: 'Trebuchet MS', Helvetica, sans-serif;
+	font-size:19px;	
+	color:#666666;
+	height:30px;
+	width:252px;
+	border:none;
+	padding-left:5px;
+}
+.input_kartno
+{
+	background-image:url(/site_media_portal/images/bg_kart_no.png);
+	background-repeat:no-repeat;
+font-family: 'Trebuchet MS', Helvetica, sans-serif;
+	font-size:16px;	
+	color:#666666;
+	height:30px;
+	width:52px;
+	border:none;
+	padding-left:5px;
+	text-align:center;
+}
+.input_ay
+{
+	background-image:url(/site_media_portal/images/bg_kart_ay.png);
+	background-repeat:no-repeat;
+font-family: 'Trebuchet MS', Helvetica, sans-serif;
+	font-size:16px;	
+	color:#666666;
+	height:32px;
+	width:65px;
+	border:none;
+	padding-left:10px;
+	text-align:center;
+	background-color:transparent;
+}
+.input_yil
+{
+	background-image:url(/site_media_portal/images/bg_kart_yil.png);
+	background-repeat:no-repeat;
+font-family: 'Trebuchet MS', Helvetica, sans-serif;
+	font-size:16px;	
+	color:#666666;
+	height:32px;
+	width:100px;
+	border:none;
+	padding-left:10px;
+	text-align:center;
+	background-color:transparent;
+}
+.input_ccv
+{
+	background-image:url(/site_media_portal/images/bg_kart_yil.png);
+	background-repeat:no-repeat;
+font-family: 'Trebuchet MS', Helvetica, sans-serif;
+	font-size:16px;	
+	color:#666666;
+	height:30px;
+	width:90px;
+	border:none;
+	padding-left:5px;
+	padding-right:5px;
+	text-align:center;
+}
+.list_1
+{
+	background-image:url(/site_media_portal/images/bg_on_odemeli.png);
+	background-repeat:repeat-x;
+	height:45px;
+}
+.back_phone
+{
+	background-image:url(/site_media_portal/images/bg_cep_tel.png);
+	background-repeat:no-repeat;
+	background-position:bottom right;
+	width:185px;
+	height:278px;
+}
+.tutar_2
+{
+font-family: 'Trebuchet MS', Helvetica, sans-serif;
+	font-size:16px;	
+	color:#FFF;
+	font-weight:bold;	
+	margin-top:55px;
+}
+
+.content_messagce
+{
+font-family: 'Trebuchet MS', Helvetica, sans-serif;
+	font-size:10px;	
+	color:#666666;
+}
+
+.colorred { color:#900; }

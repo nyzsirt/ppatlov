@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load table_tags %}
+
+{% block content %}
+<div class="container">
+    {% csrf_token %}
+    <div style="text-align:center;">
+      <div class="title">
+        <h3>{% trans 'The Ultimate Foursquare Client' %}</h3>
+      </div>
+    </div>
+
+    <div>
+        {% if form %}
+            <form id='form' action="{{ form_action }}" method="post">
+                {% csrf_token %}
+                <div class="panel panel-default panel-body">
+                    <div style="text-align:center">
+                        {% for field in form.visible_fields %}
+                        <div class="col-md-4">
+                            {{ field }}
+                        </div>
+                        {% endfor %}
+
+                        <div class="col-md-4">
+                            {% if form.buttons %}
+                            {% for data in form.buttons %}
+                            <input
+                              {% for key, value in data.items %}
+                              {{ key }}="{{ value }}"
+                              {% endfor %}
+                            >
+                            {% endfor %}
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="col-md-8">
+                        <h3>Result</h3>
+                    </div>
+                    <div class="col-md-4"  style="text-align:center">
+                        <h3>Previous Search</h3>
+                    </div>
+                    <div class="clearfix"></div>
+
+                    <!-- call django datatables render -->
+                    <div class="col-md-8">
+                        {% render_table foursquare_content %}
+                    </div>
+                    <!-- create link line for previous search -->
+                    <div class="col-md-4">
+
+                    </div>
+
+                </div>
+            </form>
+        {% endif %}
+
+        {% if error_message %}
+            <p style="color: red">{{ error_message }} </p>
+        {% endif %}
+
+    </div>
+</div> <!-- /container -->
+{% endblock %}
