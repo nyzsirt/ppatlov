@@ -36,11 +36,22 @@
                         </div>
                     </div>
                     <div class="clearfix"></div>
+                    <div class="col-md-8">
+                        <h3>Result</h3>
+                    </div>
+                    <div class="col-md-4"  style="text-align:center">
+                        <h3>Previous Search</h3>
+                    </div>
+                    <div class="clearfix"></div>
 
+                    <!-- call django datatables render -->
                     <div class="col-md-8">
                         {% render_table foursquare_content %}
                     </div>
-                    <div class="col-md-4"></div>
+                    <!-- create link line for previous search -->
+                    <div class="col-md-4">
+
+                    </div>
 
                 </div>
             </form>
