@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 Django settings for ppatlov project.
 
@@ -9,13 +10,20 @@ https://docs.djangoproject.com/en/1.10/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.10/ref/settings/
 """
-
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-# BASE_DIR = os.path.abspath(os.path.dirname(__file__))
-PPATLOV_REVISION_NUMBER = "1.devel"
+
+# version number for ppatlov
+PPATLOV_REVISION_NUMBER = "2.ppatlov.1001"
+
+# Foursquare api authentication data
+FOURSQUARE_CLIENT_ID = "V131V0IPODZOAI4DH0TXB0W1VF4R1QCAHASGHJI35D3KJLWK"
+FOURSQUARE_CLIENT_SECRET = "L5RZFRA1K2KPH33H12BFD3MECOJKEBIJSLP14KXYRYW3A5AF"
+FOURSQUARE_API_QUERY = "https://api.foursquare.com/v2/venues/search?client_id=%(clid)s&client_secret=%(clsec)s&near=%(location)s&query=%(looking_for)s&v=%(date)s&m=foursquare"
+
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
