@@ -16,7 +16,7 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # version number for ppatlov
-PPATLOV_REVISION_NUMBER = "2.ppatlov.1001"
+PPATLOV_REVISION_NUMBER = "2.devel"
 
 # Foursquare api authentication data
 FOURSQUARE_CLIENT_ID = "V131V0IPODZOAI4DH0TXB0W1VF4R1QCAHASGHJI35D3KJLWK"
