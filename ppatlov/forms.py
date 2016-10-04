@@ -1,6 +1,9 @@
+# -*- coding: utf-8 -*-
+import sys
 from django import forms
 # from django.core.validators import RegexValidator
-
+reload(sys)
+sys.setdefaultencoding('utf-8')
 
 class PpatlovClientForm(forms.Form):
     # Username is for information purposes only. Will be printed in the template.
