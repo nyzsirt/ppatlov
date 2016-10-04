@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'table',
+    'ppatlov',
 ]
 
 MIDDLEWARE = [
@@ -77,21 +78,7 @@ TEMPLATES = [
     },
 ]
 
-# TEMPLATE_LOADERS = (
-#     'django.template.loaders.filesystem.Loader',
-#     'django.template.loaders.app_directories.load_template_source',
-# )
-#
-# TEMPLATE_DIRS = (
-#     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
-#     # Always use forward slashes, even on Windows.
-#     # Don't forget to use absolute paths, not relative paths.
-#     "/root/ppatlov/templates",
-# )
-
-
 WSGI_APPLICATION = 'ppatlov.wsgi.application'
-
 
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
@@ -99,7 +86,11 @@ WSGI_APPLICATION = 'ppatlov.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': "ppatlov",
+        'USER': 'ppatlov',
+        'PASSWORD': 'ppatlov',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
     }
 }
 

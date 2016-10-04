@@ -4,7 +4,10 @@ import settings
 import requests
 from pprint import pprint
 from datetime import date
+from django.db import transaction
 from django.shortcuts import render
+# from ppatlov.models import ManageSearches
+from ppatlov.models import Searches
 from ppatlov.forms import PpatlovClientForm
 from ppatlov.tables import ForsquareResult
 
@@ -35,6 +38,9 @@ def get_foursquare_data(looking_for, location):
     # parse api result according to table model
     return_table_data = []
     if data["meta"]["code"] == 200:
+
+        Searches(looking_for=looking_for, location=location).save()
+
         for venue in data["response"]["venues"]:
             new_venue = {}
 
