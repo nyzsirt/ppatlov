@@ -2,6 +2,7 @@
 import sys
 import settings
 import requests
+from pprint import pprint
 from datetime import date
 from django.shortcuts import render
 from ppatlov.forms import PpatlovClientForm
@@ -27,16 +28,14 @@ def get_foursquare_data(looking_for, location):
         "looking_for": looking_for,
         "date": today,
     }
-    #
-    json_data = {}# requests.get(settings.FOURSQUARE_API_QUERY % fours_api_prm).json()
 
-    # print(json_data.keys())
+    # call foursquare api
+    data = requests.get(settings.FOURSQUARE_API_QUERY % fours_api_prm).json()
+
+    # parse api result according to table model
     return_table_data = []
-
-
-    # if data["meta"]["code"] == 200:
-    if json_data["meta"]["code"] == 200:
-        for venue in json_data["response"]["venues"]:
+    if data["meta"]["code"] == 200:
+        for venue in data["response"]["venues"]:
             new_venue = {}
 
             new_venue["name"] = venue["name"]
@@ -47,9 +46,7 @@ def get_foursquare_data(looking_for, location):
             new_venue["checkin_count"] = venue["stats"]["checkinsCount"]
             return_table_data.append(new_venue)
 
-        return return_table_data
-    else:
-        return return_table_data
+    return return_table_data
 
 
 def index(request):
@@ -63,12 +60,6 @@ def index(request):
 
         # call foursquare api request
         table_data = get_foursquare_data(post_prm["looking_for"], post_prm["location"])
-        # parse json data
-        # table_data = [{
-        #     "name": "pizza",
-        #     "phone_number": "5334430776",
-        #     "checkin_count": "333"}
-        # ]
 
     # set result to table
     foursquare_content = ForsquareResult(table_data)

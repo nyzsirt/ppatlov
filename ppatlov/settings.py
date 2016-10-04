@@ -19,11 +19,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PPATLOV_REVISION_NUMBER = "2.ppatlov.1001"
 
 # Foursquare api authentication data
-FOURSQUARE_CLIENT_ID = "****"
-FOURSQUARE_CLIENT_SECRET = "***"
-FOURSQUARE_API_QUERY = "https://api.foursquare.com/v2/venues/search?client_id=%(clid)s&client_secret=%(clsec)s&near=%(location)s&query=%(looking_for)s&v=%(date)s&m=foursquare"
-
-
+FOURSQUARE_CLIENT_ID = "V131V0IPODZOAI4DH0TXB0W1VF4R1QCAHASGHJI35D3KJLWK"
+FOURSQUARE_CLIENT_SECRET = "L5RZFRA1K2KPH33H12BFD3MECOJKEBIJSLP14KXYRYW3A5AF"
+FOURSQUARE_API_QUERY = "https://api.foursquare.com/v2/venues/search?client_id=%(clid)s&client_secret=%(clsec)s&near=%(location)s&query=%(looking_for)s&v=%(date)s"
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
@@ -100,7 +98,7 @@ WSGI_APPLICATION = 'ppatlov.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
