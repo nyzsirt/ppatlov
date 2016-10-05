@@ -59,7 +59,14 @@ def index(request):
     """
         render client page method
     """
+
     table_data = []
+
+
+    # get previous searches and prepare search list
+    search_content = []
+    for search in Searches.objects.order_by("-_key")[:20]:
+        search_content.append("%s in %s." % (search.looking_for, search.location,))
 
     if request.method == 'POST':
         post_prm = request.POST
@@ -77,5 +84,6 @@ def index(request):
     context_prm = {
         "form": form,
         "foursquare_content": foursquare_content,
+        "search_content": search_content,
     }
     return render(request, 'index.html', context_prm)

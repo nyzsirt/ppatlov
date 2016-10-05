@@ -48,9 +48,13 @@
                     <div class="col-md-8">
                         {% render_table foursquare_content %}
                     </div>
-                    <!-- create link line for previous search -->
-                    <div class="col-md-4">
 
+                    <!-- create link line for previous search -->
+                    <div class="col-md-4" style="text-align:center">
+                        {% for line in search_content %}
+                            <a href="url">{{ line }}</a>
+                            <div class="clearfix"></div>
+                        {% endfor %}
                     </div>
 
                 </div>

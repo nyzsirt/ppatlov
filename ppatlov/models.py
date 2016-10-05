@@ -9,7 +9,7 @@ class Searches(models.Model):
     """
         Search table
     """
-    _key = models.BigIntegerField(unique=True, primary_key=True)
+    _key = models.AutoField(primary_key=True)
     looking_for = models.CharField(max_length=100)
     location = models.CharField(max_length=100)
 
