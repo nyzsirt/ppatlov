@@ -52,7 +52,7 @@
                     <!-- create link line for previous search -->
                     <div class="col-md-4" style="text-align:center">
                         {% for line in search_content %}
-                            <a href="url">{{ line }}</a>
+                            <a href="/?location={{ line.location }}&looking_for={{ line.looking_for }}">{{ line.text }}</a>
                             <div class="clearfix"></div>
                         {% endfor %}
                     </div>

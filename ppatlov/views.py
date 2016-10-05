@@ -14,7 +14,7 @@ from ppatlov.tables import ForsquareResult
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
-def get_foursquare_data(looking_for, location):
+def get_foursquare_data(looking_for, location, mode="post"):
     """
     get data and create list from request result.
     :return:
@@ -38,12 +38,12 @@ def get_foursquare_data(looking_for, location):
     # parse api result according to table model
     return_table_data = []
     if data["meta"]["code"] == 200:
-
-        Searches(looking_for=looking_for, location=location).save()
+        # dont save search when search come from previous search link
+        if mode == "post":
+            Searches(looking_for=looking_for, location=location).save()
 
         for venue in data["response"]["venues"]:
             new_venue = {}
-
             new_venue["name"] = venue["name"]
             new_venue["phone_number"] = ""
             if venue["contact"]:
@@ -59,14 +59,21 @@ def index(request):
     """
         render client page method
     """
-
     table_data = []
-
-
     # get previous searches and prepare search list
     search_content = []
     for search in Searches.objects.order_by("-_key")[:20]:
-        search_content.append("%s in %s." % (search.looking_for, search.location,))
+        search_content.append({
+            "text": "%s in %s." % (search.looking_for, search.location,),
+            "looking_for": search.looking_for,
+            "location": search.location,
+        })
+
+    # get data previous search coming from link
+    get_prm = request.GET
+    if get_prm:
+        if get_prm.get("looking_for") and get_prm.get("looking_for"):
+            table_data = get_foursquare_data(get_prm["looking_for"], get_prm["location"], "get")
 
     if request.method == 'POST':
         post_prm = request.POST
