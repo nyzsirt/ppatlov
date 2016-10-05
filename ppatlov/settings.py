@@ -14,6 +14,7 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
 # version number for ppatlov
 PPATLOV_REVISION_NUMBER = "1.master"
@@ -63,8 +64,8 @@ ROOT_URLCONF = 'ppatlov.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        # 'DIRS': [os.path.join(BASE_DIR, 'templates')]
-        'DIRS': ["/root/ppatlov/templates",]
+        'DIRS': [os.path.join(BASE_DIR, 'templates')]
+        # 'DIRS': ["/root/ppatlov/templates",]
         ,
         'APP_DIRS': True,
         'OPTIONS': {
@@ -83,13 +84,23 @@ WSGI_APPLICATION = 'ppatlov.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': "ppatlov",
+#         'USER': 'ppatlov',
+#         'PASSWORD': 'ppatlov',
+#         'HOST': '127.0.0.1',
+#         'PORT': '5432',
+#     }
+# }
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': "ppatlov",
-        'USER': 'ppatlov',
-        'PASSWORD': 'ppatlov',
-        'HOST': '127.0.0.1',
+        'NAME': "d6rcac1atpttl5",
+        'USER': 'rqbrcmlcmprulp',
+        'PASSWORD': 'Hf0xmU_nghdZEmYSROWbwLuygz',
+        'HOST': 'ec2-204-236-228-133.compute-1.amazonaws.com',
         'PORT': '5432',
     }
 }
@@ -131,12 +142,15 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
+STATIC_ROOT = 'staticfiles'
 STATICFILES_DIRS = (
 
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    '/root/ppatlov/static/',
+    # os.path.join(PROJECT_ROOT, 'static'),
+    os.path.join(BASE_DIR, 'static'),
 )
+
 
 STATIC_URL = '/static/'
