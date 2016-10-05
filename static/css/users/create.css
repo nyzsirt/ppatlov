@@ -1,0 +1,41 @@
+label
+{
+width: 8em;
+float: left;
+text-align: right;
+margin-right: 1.5em;
+display: block;
+}
+
+.submit input
+{
+margin-left: 10em;
+_margin-bottom: 1em;
+}
+input
+{
+color: #781351;
+background: #fee3ad;
+border: 1px solid #781351;
+}
+
+.submit input
+{
+color: white;
+background: #6677FF;
+border: 2px outset #d7b9c9;
+_margin-left:8.55em;
+}
+fieldset
+{
+border: 2px solid #6677FF;
+width: 21em;
+}
+
+legend
+{
+color: white;
+background: #6677FF;
+border: 2px solid #6677FF;
+padding: 2px 6px 2px 6px;
+} 

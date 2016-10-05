@@ -1,0 +1,323 @@
+/** Add css rules here for your application. */
+
+
+@CHARSET "UTF-8";
+
+ul.errorlist {
+    margin: 0;
+    padding: 0;
+}
+
+.errorlist li {
+	background-color: red;
+    color: white;
+    display: block;
+    font-size: 12px;
+    margin: 0 38px 3px;
+    padding: 4px 5px;
+    width: 280px;
+}
+
+ul{
+	margin: 0;
+    padding: 0;
+}
+
+li{
+    display: block;
+    font-size: 10px;
+    margin: 0 0 3px;
+    padding: 4px 5px;
+}
+
+DIV.dragdrop-dropTarget {
+  height: 100%;
+  width: 100%;
+  overflow: visible;
+}
+
+acronym {
+text-decoration: none;
+border: 0;
+cursor: help;
+}
+
+li.lstart-menu-tree-node {
+    list-style-image: url(/site_media_portal/images/report-icon.gif);
+}
+.gwt-Button, .gwt-Button:hover, .gwt-Button:visited{
+    background: none;
+    border: none;
+    color: #33699e;
+}
+
+form span span img {
+    margin-right: 4px;
+}
+
+img {
+border: none;
+}
+
+h1 {
+color: #bcd2e8;
+font-size: 1.2em;
+margin-top:10px;
+line-height: 50%;
+font-weight: 100;
+}
+
+h2 {
+color: #bcd2e8;
+font-size: 0.8em;
+line-height: 40%;
+font-weight: bold;
+}
+
+select {
+arrow-color: #ffffff;
+margin-right: 25px;
+}
+
+option {
+background-color: #4c89c2;
+}
+
+iframe {
+    border:0;
+    width: 100%;
+    height: 100%;
+}
+.toolbar
+{
+	background-image: url('/site_media_portal/images/boxhandle_bg.gif');
+	width: 100%;
+	height: 20px;
+	margin-top: -6px;
+	color:blue;
+}
+.butonPanel
+{
+	text-align: right;
+	float: right;
+}
+.butonPanel td:hover
+{
+	cursor: pointer;
+}
+
+.insideWindow
+{
+	width: 100%;
+}
+
+.dragdrop-handle {
+	line-height: 170%;
+}
+
+html, body {
+height: 100%;
+}
+
+body {
+margin: 0;
+padding: 0;
+font-family: 'Trebuchet MS', Verdana, Helvetica;
+font-size:0.92em;
+color: #333;
+}
+
+hr {
+border: 0;
+background-color: #aaa;
+height: 1px;
+width: 100%;
+}
+
+/* DIVS */
+
+#lstart-upside-left {
+background: url("/site_media_portal/images/bg.gif") repeat-x scroll 0 0 #FFFFFF;
+height: 75px;
+}
+
+#lstart-upside-right {
+position: absolute;
+top: 0px;
+left: 350px;
+right: 0px;
+height: 75px;
+}
+
+#lstart-bar-left {
+position: absolute;
+top: 75px;
+left: 25px;
+width: 450px;
+height: 25px;
+text-align: center;
+}
+
+#lstart-bar-right {
+position: absolute;
+top: 75px;
+left: 450px;
+right: 0px;
+height: 25px;
+text-align: right;
+font-size: 0.7em;
+color: #bcd2e8;
+line-height: 240%;
+}
+
+/* MENU */
+
+#lstart-menu a, #lstart-menu a:hover {
+color: #fff;
+font-size: 0.9em;
+font-weight: 600;
+text-decoration: none;
+line-height: 180%;
+}
+
+#lstart-menu a:active, #lstart-menu a.lstart-selected {
+color: #3d648c;
+font-size: 0.9em;
+font-weight: 600;
+text-decoration: none;
+line-height: 180%;
+}
+
+#lstart-m_button {
+list-style: none;
+margin: 0;
+padding: 0px;
+height: 25px;
+display: inline;
+overflow: hidden;
+width: 550px;
+}
+
+#lstart-m_button li {
+margin: 0;
+padding: 0;
+display: inline;
+list-style-type: none;
+}
+
+#lstart-m_button a {
+float: left;
+padding: 0 0 25px 0;
+overflow: hidden;
+height: 0px !important;
+height /**/: 25px; /* IE5/Win */
+}
+
+#lstart-m_button a:hover {
+background-position: 0 -25px;
+}
+
+#lstart-m_button a:active, #lstart-m_button a.lstart-selected {
+background-position: 0 -50px;
+}
+
+#lstart-m_background a  {
+width: 80px;
+background: url(/site_media_portal/images/menu_bg.gif) top left no-repeat;
+}
+
+/* U-MENU */
+
+#lstart-u-menu {
+margin-top: 15px;
+margin-right: 25px;
+float: right;
+}
+
+#lstart-u-menu a {
+color: #3d7bb4;
+font-size: 0.7em;
+font-weight: 600;
+text-decoration: none;
+line-height: 750%;
+}
+
+#lstart-u-menu a:hover {
+color: #4c89c2;
+font-size: 0.7em;
+font-weight: 600;
+text-decoration: none;
+line-height: 750%;
+}
+
+#lstart-u-m_button {
+list-style: none;
+margin: 0;
+padding: 0px;
+height: 50px;
+display: inline;
+overflow: hidden;
+}
+
+#lstart-u-m_button li {
+margin: 0;
+padding: 0;
+display: inline;
+list-style-type: none;
+}
+
+#lstart-u-m_button a {
+float: left;
+padding: 0 0 50px 0;
+overflow: hidden;
+height: 0px !important;
+height /**/: 50px; /* IE5/Win */
+}
+
+#lstart-u-m_button a:hover {
+background-position: 0 -50px;
+}
+
+#lstart-u-m_help  {
+width: 50px;
+text-align: center;
+}
+
+#lstart-u-m_help a  {
+width: 50px;
+background: url(/site_media_portal/images/help_bg.gif) top left no-repeat;
+text-align: center;
+}
+
+#lstart-u-m_logout  {
+width: 50px;
+text-align: center;
+}
+
+#lstart-u-m_logout a  {
+width: 50px;
+background: url(/site_media_portal/images/logout_bg.gif) top left no-repeat;
+text-align: center;
+}
+
+.lstart-logo {
+float: left;
+margin-left: 4px;
+}
+
+.lstart-name {
+float: left;
+margin-top: 8px;
+margin-left: 12px;
+}
+
+/* Content */
+
+#lstart-content {
+    position: absolute;
+    top: 100px;
+    left: 0px;
+    bottom:5px;
+    width: 99.9%;
+    border-right: 1px solid #bcd2e8;
+}
