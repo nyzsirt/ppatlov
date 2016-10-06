@@ -50,13 +50,15 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    'django.middleware.security.SecurityMiddleware',
+
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.security.SecurityMiddleware',
 ]
 
 ROOT_URLCONF = 'ppatlov.urls'
@@ -150,6 +152,7 @@ STATICFILES_DIRS = (
     # Don't forget to use absolute paths, not relative paths.
     # os.path.join(PROJECT_ROOT, 'static'),
     os.path.join(PROJECT_ROOT, 'static'),
+    '/var/www/static/',
     # "/app/static",
 )
 

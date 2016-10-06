@@ -17,12 +17,13 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from ppatlov import views, settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     url(r'^$', views.index, name="index"),
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT )
 
-if not settings.DEBUG:
-    urlpatterns += patterns('',
-        (r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
-    )
+# if not settings.DEBUG:
+#     urlpatterns += patterns('',
+#         (r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+#     )
