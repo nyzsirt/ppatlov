@@ -150,7 +150,7 @@ STATICFILES_DIRS = (
     # Don't forget to use absolute paths, not relative paths.
     # os.path.join(PROJECT_ROOT, 'static'),
     # os.path.join(PROJECT_ROOT, 'static'),
-    "/app/ppatlov/staticfiles"
+    "/app/ppatlov/staticfiles",
     # "/app/static",
 )
 
