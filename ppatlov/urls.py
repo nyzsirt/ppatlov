@@ -21,7 +21,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     url(r'^$', views.index, name="index"),
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT )
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT, )
 
 # if not settings.DEBUG:
 #     urlpatterns += patterns('',
