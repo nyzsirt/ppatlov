@@ -32,11 +32,14 @@ def get_foursquare_data(looking_for, location, mode="post"):
         "date": today,
     }
 
-    # call foursquare api
-    data = requests.get(settings.FOURSQUARE_API_QUERY % fours_api_prm).json()
+    try:
+        # call foursquare api
+        data = requests.get(settings.FOURSQUARE_API_QUERY % fours_api_prm).json()
+    except:
+        return []
 
-    # parse api result according to table model
     return_table_data = []
+    # parse api result according to table model
     if data["meta"]["code"] == 200:
         # dont save search when search come from previous search link
         if mode == "post":
