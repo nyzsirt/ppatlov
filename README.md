@@ -26,6 +26,7 @@ $ createdb ppatlov
 $ createuser ppatlov
 $ psql
 postgresql # alter user ppatlov with encrypted password 'ppatlov';
+#### grant all privileges on database dn_nane to db_user;
 postgresql # grant all privileges on database ppatlov to ppatlov;
 
 ```
